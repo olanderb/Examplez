@@ -12,13 +12,14 @@ data <- read_sav("1_RawData/exampledataEnglish_raw.sav")
 view_df(data)
 
 #3 - How to work with labels with out messing up things ?
-#example livelihood coping strategy
-#shows values
+#example geographic information where both the value name and the value label are useful
+#shows value name
 table(data$ADMIN1Name)
 str(data$ADMIN1Name)
 
-#converts to labels
+#to_factor to more easily use labels
 data <- to_factor(data)
+#see now it displays the value labels
 table(data$ADMIN1Name)
 
 #save as sav file
